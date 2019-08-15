@@ -1,0 +1,33 @@
+---
+id: S3_BUCKET_NOT_ENCRYPTED
+resource: s3_bucket_encryption
+assertion: >
+  S3 bucket encryption is NOT enabled using AES256 or KMS.
+arguments:
+  Bucket: elasticbeanstalk-us-east-2-089068450313
+specs:
+  -
+    ApplyServerSideEncryptionByDefault:
+      SSEAlgorithm: AES256
+---
+id: S3_BUCKET_NOT_ENCRYPTED
+resource: s3_bucket_encryption
+assertion: >
+  S3 bucket encryption is NOT enabled using AES256 or KMS.
+arguments:
+  Bucket: keith.monihen.rocks
+specs:
+  -
+    ApplyServerSideEncryptionByDefault:
+      SSEAlgorithm: AES256
+---
+id: S3_BUCKET_NOT_ENCRYPTED
+resource: s3_bucket_encryption
+assertion: >
+  S3 bucket encryption is NOT enabled using AES256 or KMS.
+arguments:
+  Bucket: bad.bucket
+specs:
+  -
+    ApplyServerSideEncryptionByDefault:
+      SSEAlgorithm: AES256

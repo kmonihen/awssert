@@ -1,0 +1,20 @@
+---
+resource: s3_bucket_encryption
+description: >
+  Describe S3 bucket encryption configuration.
+boto3_doc: >
+  https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/s3.html#S3.Client.get_bucket_encryption
+client_type: s3
+describe_call: get_bucket_encryption
+arguments:
+  - Bucket
+---
+resource: s3_bucket_logging
+description: >
+  Describe S3 bucket logging configuration.
+boto3_doc: >
+  https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/s3.html#S3.Client.get_bucket_logging
+client_type: s3
+describe_call: get_bucket_logging
+arguments:
+  - Bucket

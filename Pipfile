@@ -1,0 +1,23 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+boto3 = "~=1.9"
+click = "~=7.0"
+awssert = {editable = true,path = "."}
+botostubs = "*"
+
+[dev-packages]
+pytest = "*"
+yapf = "*"
+yamllint = "*"
+prospector = "*"
+mypy = "*"
+pytest-cov = "*"
+mock = "*"
+bandit = "*"
+
+[requires]
+python_version = "3.6"
