@@ -1,4 +1,4 @@
-.PHONY: check-env test lint mypy unittest yapf build clean bumppatch bumpmajor bumpminor version
+.PHONY: check-env test tox lint mypy unittest yapf build clean bumppatch bumpmajor bumpminor version
 
 check-env: # Check that Make is running in pipenv
 ifndef PIP_PYTHON_PATH
@@ -7,7 +7,14 @@ endif
 
 test: codelint seclint mypy yamllint build unittest
 
-codelint: check-env # Static analysis with prospector for Python code
+tox: # Run the tox test suite
+	@printf "\n\n\033[0;32m** Test suite (tox) **\n\n\033[0m"
+	pyenv install -s 3.6.8
+	pyenv install -s 3.7.2
+	pyenv local 3.6.8 3.7.2
+	tox
+
+codelint: # Static analysis with prospector for Python code
 	@printf "\n\n\033[0;32m** Static code analysis (prospector) **\n\n\033[0m"
 	prospector setup.py awssert/*.py tests/*.py
 

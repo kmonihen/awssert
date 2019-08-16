@@ -18,6 +18,8 @@ mypy = "*"
 pytest-cov = "*"
 mock = "*"
 bandit = "*"
+tox = "*"
+tox-pyenv = "*"
 
 [requires]
 python_version = "3.6"

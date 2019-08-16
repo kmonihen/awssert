@@ -12,6 +12,6 @@ setup(name="awssert",
       setup_requires=['pytest-runner'],
       test_suite='tests',
       tests_require=[
-          "pytest~=5.0", "mock~=3.0", "mypy", "prospector~=1.1", "pytest-cov",
-          "yamllint~=1.16"
+          "pytest", "mock", "mypy", "prospector", "pytest-cov", "bandit",
+          "yamllint"
       ])
