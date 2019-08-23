@@ -14,7 +14,7 @@ tox: # Run the tox test suite
 	pyenv local 3.6.8 3.7.2
 	tox
 
-codelint: # Static analysis with prospector for Python code
+codelint: check-env # Static analysis with prospector for Python code
 	@printf "\n\n\033[0;32m** Static code analysis (prospector) **\n\n\033[0m"
 	prospector setup.py awssert/*.py tests/*.py
 
@@ -43,8 +43,7 @@ build: check-env clean #test # Test and build the package
 	python setup.py sdist
 	pip install -e .
 
-clean: check-env # Clean up the test and build artifacts
-	pip uninstall -y awssert
+clean: # Clean up the test and build artifacts
 	rm -rf .mypy_cache
 	rm -rf .pytest_cache
 	rm -rf .coverage
