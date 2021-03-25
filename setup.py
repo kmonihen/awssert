@@ -7,7 +7,7 @@ setup(name="awssert",
           'console_scripts': ['awssert = awssert.__main__:awssert_cli']
       },
       install_requires=[
-          "boto3==1.9.205", "pyyaml==5.1.2", "click==7.0", "botostubs"
+          "boto3==1.9.205", "pyyaml==5.4", "click==7.0", "botostubs"
       ],
       setup_requires=['pytest-runner'],
       test_suite='tests',
